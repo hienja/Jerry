@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<input id="searchBar" type="" name="" placeholder="Enter Text"><button id="searchButton">Search</button>
+</body>
+<script type="text/javascript">
+	//DOMContentLoaded runs everything within its function once DOM contents are loaded
+	document.addEventListener("DOMContentLoaded", function(){
+		//We added an event listener on the element with id "searchbar" to do work on any key that is pressed down
+		document.getElementById("searchBar").addEventListener("keypress", function(event){
+			//13 is the number for enter
+			if(event.which === 13) {
+				//First we grab the value inside our input element
+				var searchText = document.getElementById("searchBar").value;
+				//We can direct the page here
+				//location.href = "";
+			}
+		});
+		//we can also add this function to the button element's onclick functionality directly.
+		document.getElementById("searchButton").addEventListener("click", function(event){
+			var searchText = document.getElementById("searchBar").value;
+			//location.href = "";
+		});
+	});
+</script>
+</html>
